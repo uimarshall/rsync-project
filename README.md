@@ -1,6 +1,6 @@
 # rsync-project
 
-This repository is for the implementation of back up between two servers using EC2 instance. We intend to backup the content of `server A` into `server B`. Sever A will serve as our main server where our files or data are stored, then server will be a backup incase anything happens to server A and it goes down.
+This repository is for the implementation of back up between two servers using EC2 instance. We intend to backup the content of `server A` into `server B`. Sever `A` will serve as our main server where our files or data are stored, then server `B` will be a backup incase anything happens to `server A` and it goes down.
 
 This is a way to automate an administrative task.
 We will learn how to sync one server with another using rsync.
@@ -33,9 +33,13 @@ Rsync works by only transferring the differences between files, making it a very
 
 - Install Rysnc on both servers
 
-`sudo apt update`
+```
+sudo apt update
+```
 
-`sudo apt install rsync`
+```
+sudo apt install rsync
+```
 
 ### Step-2 : Configure SSH Key-based Authentication:
 
@@ -45,7 +49,10 @@ The `Source server` should have the `Private key`, while the `Destination Server
 
 - Generate an SSH key pair on the source server:
 
-`ssh-keygen -t rsa`
+```
+ssh-keygen -t rsa
+
+```
 
 You can use `ls -la` to check the hidden file (`.ssh`) that is just created.
 
